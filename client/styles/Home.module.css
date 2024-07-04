@@ -1,0 +1,576 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow-x: hidden;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.section_container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 100px;
+}
+
+.h_section_container {
+  display: flex;
+  justify-content: space-evenly;
+  margin-left: 120px;
+  margin-right: 120px;
+}
+
+.content_container {
+  padding-top: 200px;
+  padding-bottom: 200px;
+}
+
+.content_container.bg_color2 {
+  background-color: #faf1e8;
+}
+
+.content_container.last {
+  padding-bottom: 0;
+}
+
+.flex_column {
+  display: flex;
+  flex-direction: column;
+}
+
+@keyframes boing {
+  0%, 15%, 40%, 75%, 100% {
+    transform-origin: center center;
+  }
+  0% {
+    transform: scale(0, 0);
+  }
+  15% {
+    transform: scale(1.5, 1.8);
+  }
+  40% {
+    transform: scale(0.95, 0.95);
+  }
+  75% {
+    transform: scale(1.05, 1);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+
+.bg_title {
+  display: flex;
+  justify-content: center;
+  animation: boing 300ms ease-in-out;
+}
+
+.landing {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  margin-left: 80px;
+  filter: drop-shadow(0px 5px 4px #361a0c);
+  animation: boing 500ms ease-in-out;
+}
+
+.landing img {
+  width: 600px;
+  min-width: 500px;
+}
+
+.landing_info {
+  animation: boing 500ms ease-in-out;
+}
+
+.landing_title {
+  width: 600px;
+  margin-top: 80px;
+  margin-bottom: 20px;
+}
+
+.landing_info p.desc {
+  font-size: 32px;
+  margin-bottom: 28px;
+}
+
+.landing_info p.ca_label {
+  font-size: 20px;
+  font-weight: 700;
+  font-style: normal;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.landing_info .ca_container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 550px;
+  height: 80px;
+  padding: 8px 8px 8px 15px;
+  border: 1px solid #000;
+  border-bottom-width: thick;
+  border-radius: 10px;
+  background-color: #faf1e8;
+}
+
+.landing_info .ca_container div:first-of-type {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 75%;
+}
+
+.landing_info .ca_container span.ca {
+  font-size: 28px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.landing_info div.copy {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 140px;
+  height: 60px;
+  padding: 18px;
+  border: 1px solid;
+  border-radius: 10px;
+  background-color: #ed3b23;
+  color: #fff;
+}
+
+.landing_info div.copy:before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+  border-bottom: 3px solid;
+  border-bottom-color: #000;
+}
+
+.landing_info div.copy:hover {
+  cursor: pointer;
+}
+
+.landing_info div.copy span {
+  position: relative;
+  top: 2px;
+  font-size: 32px;
+  text-transform: uppercase;
+}
+
+.about img {
+  width: 300px;
+  filter: drop-shadow(0px 5px 4px #361a0c);
+}
+
+.about > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 32px;
+  width: 600px;
+}
+
+.about h1 {
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.about .btn {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+  width: 300px;
+  height: 60px;
+  padding: 18px;
+  border: 1px solid #000;
+  border-bottom-width: 4px;
+  border-radius: 10px;
+  background-color: #ed3b23;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.memes img {
+  width: 600px;
+  filter: drop-shadow(0px 5px 4px #361a0c);
+}
+
+.memes > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 32px;
+  width: 600px;
+}
+
+.memes h1 {
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.memes .btn {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+  width: 300px;
+  height: 60px;
+  padding: 18px;
+  border: 1px solid #000;
+  border-bottom-width: 4px;
+  border-radius: 10px;
+  background-color: #ed3b23;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.token {
+  justify-content: center;
+  align-items: center;
+  margin-left: 120px;
+  margin-right: 120px;
+  font-size: 32px;
+}
+
+.token h1 {
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 80px;
+}
+
+.footer {
+}
+
+.footer img {
+  display: flex;
+  min-width: 800px;
+  margin-top: 100px;
+}
+
+.btn:hover {
+  cursor: pointer;
+}
+
+.buy_container {
+  width: 50%;
+}
+
+.buy {
+  font-size: 80px;
+  text-align: center;
+  background-color: #098a74;
+}
+
+.info_h {
+  display: flex;
+  justify-content: center;
+}
+
+.info_box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  text-align: center;
+  font-size: 30px;
+  width: 40%;
+}
+
+.bg {
+  display: block;
+  z-index: -100;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+.pill_container h1 {
+  margin-bottom: 40px;
+  font-size: 3rem;
+}
+
+.infos p,
+.pill_container p {
+  font-size: 22px;
+  max-width: 678px;
+}
+
+.nav_links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  margin-bottom: 100px;
+}
+
+.nav_item img {
+  width: 120px;
+}
+
+.nav_item:first-child {
+  margin-right: 50px;
+}
+
+.nav_item:last-child {
+  margin-left: 50px;
+}
+
+.nav_item,
+.logo {
+  transition: all 0.2s ease-in-out;
+}
+
+.nav_item:hover,
+.logo:hover {
+  transform: scale(1.1);
+}
+
+.pill_container {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  color: #361a0c;
+  margin-bottom: 100px;
+}
+
+.pill {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 400px;
+  height: 300px;
+  background-color: rgba(255, 255, 255, 1);
+  margin-left: 20px;
+  margin-right: 20px;
+  filter: drop-shadow(0px 5px 4px #361a0c);
+  border: 2px solid;
+  border-radius: 12px;
+}
+
+.pill_button {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  font-size: 40px;
+  color: #ffffff;
+  width: 500px;
+  height: 100px;
+  background-color: black;
+  filter: drop-shadow(0px 5px 4px #361a0c);
+  border: 2px solid transparent;
+  border-radius: 12px;
+  transition: all 0.2s ease-in-out;
+}
+
+.pill_button:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.pill .header {
+  font-size: 20px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.pill .detail {
+  font-size: 40px;
+}
+
+@media (max-width: 1800px) {
+  .pill_container {
+    flex-direction: column;
+  }
+
+  .pill {
+    margin-bottom: 30px;
+  }
+
+  .pill:last-child {
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 1300px) {
+  .h_section_container.landing_container,
+  .h_section_container.about,
+  .h_section_container.memes {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .landing_info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .landing {
+    width: 400px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 50px;
+  }
+
+  .landing_info p.desc {
+    font-size: 26px;
+    text-align: center;
+  }
+
+  .about {
+    text-align: center;
+  }
+
+  .about h1 {
+    margin-top: 40px;
+  }
+
+  .about > div {
+    width: 100%;
+  }
+
+  .memes {
+    text-align: center;
+  }
+
+  .memes h1 {
+    margin-top: 40px;
+  }
+
+  .memes > div {
+    width: 100%;
+  }
+}
+
+@media (max-width: 930px) {
+  .pill_container {
+    flex-direction: column;
+  }
+
+  .pill {
+    width: 250px;
+    height: 150px;
+    margin-bottom: 30px;
+  }
+
+  .pill_button {
+    font-size: 30px;
+    width: 300px;
+    height: 80px;
+  }
+
+  .pill:last-child {
+    margin-bottom: 0;
+  }
+
+  .pill .header {
+    font-size: 15px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+  }
+
+  .pill .detail {
+    font-size: 20px;
+  }
+}
+
+
+@media (max-width: 700px) {
+  .landing img {
+    min-width: 400px;
+  }
+
+  .about p {
+    font-size: 26px;
+    text-align: center;
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+
+  .memes p {
+    font-size: 26px;
+    text-align: center;
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+}
+
+@media (max-width: 600px) {
+  .landing img {
+    min-width: 350px;
+  }
+
+  .landing_info .ca_container {
+    width: 450px;
+  }
+}
+
+@media (max-width: 500px) {
+  .h_section_container {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .landing_title {
+    width: 300px;
+    margin-bottom: 20px;
+  }
+
+  .landing_info p.desc {
+    font-size: 28px;
+    margin-left: 20px;
+    margin-right: 20px;
+    text-align: center;
+  }
+
+  .landing_info .ca_container {
+    width: 425px;
+  }
+
+  .landing img {
+    min-width: 300px;
+  }
+
+  .memes img {
+    width: 300px;
+  }
+
+  .memes h1 {
+    font-size: 56px;
+  }
+
+  .token .pill .detail {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 400px) {
+  .landing_info .ca_container {
+    width: 300px;
+  }
+
+  .landing img {
+    width: 200px;
+  }
+}

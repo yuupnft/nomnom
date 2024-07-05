@@ -153,8 +153,27 @@ export default function Home() {
               </div>
               <div className={styles.pill}>
                 <div className={styles.detail}>
-                  Go to Raydium and paste the $NOMNOM contract address.
+                  Go to <a href="https://jup.ag/swap/6ZrYhkwvoYE4QqzpdzJ7htEHwT2u2546EkTNJ7qepump-SOL">Jupiter</a> and paste the $NOMNOM contract address.
                 </div>
+              </div>
+            </div>
+            {/* Join Our Community */}
+            <div className={styles.socials_container}>
+              <h1>Socials</h1>
+              <p>Join the $NOMNOM Community</p>
+              <div className={styles.socials}>
+                <a href="https://twitter.com/nomnom_solana">
+                  <img src="/twitter.svg" alt="Nomnom - Twitter"/>
+                </a>
+                <a href="https://t.me/NomNom_on_Solana">
+                  <img src="/telegram.svg" alt="Nomnom - Telegram"/>
+                </a>
+                <a href="https://www.instagram.com/nomnom_solana">
+                  <img src="/instagram.svg" alt="Nomnom - Instagram"/>
+                </a>
+                <a href="https://www.reddit.com/r/nomnom_solana/">
+                  <img src="/reddit.svg" alt="Nomnom - Reddit"/>
+                </a>
               </div>
             </div>
           </div>

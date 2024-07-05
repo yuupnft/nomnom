@@ -180,6 +180,7 @@
   align-items: center;
   font-size: 32px;
   width: 600px;
+  text-align: center;
 }
 
 .about h1 {
@@ -216,6 +217,8 @@
   align-items: center;
   font-size: 32px;
   width: 600px;
+  margin-left: 80px;
+  text-align: center;
 }
 
 .memes h1 {
@@ -255,6 +258,51 @@
   margin-bottom: 80px;
 }
 
+.token .pill {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.socials_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /*border: 10px solid #000000;*/
+  border-radius: 20px;
+  padding: 60px;
+  background-color: #ffd49b;
+}
+
+.socials_container h1 {
+  margin-bottom: 20px;
+}
+
+.socials_container p {
+  text-align: center;
+}
+
+.socials {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+
+.socials img {
+  width: 108px;
+  padding-left: 10px;
+  padding-right: 10px;
+  transition: all 0.2s ease-in-out;
+}
+
+.socials img:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
 .footer {
 }
 
@@ -268,79 +316,14 @@
   cursor: pointer;
 }
 
-.buy_container {
-  width: 50%;
-}
-
-.buy {
-  font-size: 80px;
-  text-align: center;
-  background-color: #098a74;
-}
-
-.info_h {
-  display: flex;
-  justify-content: center;
-}
-
-.info_box {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  text-align: center;
-  font-size: 30px;
-  width: 40%;
-}
-
-.bg {
-  display: block;
-  z-index: -100;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-}
-
 .pill_container h1 {
   margin-bottom: 40px;
   font-size: 3rem;
 }
 
-.infos p,
 .pill_container p {
   font-size: 22px;
   max-width: 678px;
-}
-
-.nav_links {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  list-style: none;
-  margin-bottom: 100px;
-}
-
-.nav_item img {
-  width: 120px;
-}
-
-.nav_item:first-child {
-  margin-right: 50px;
-}
-
-.nav_item:last-child {
-  margin-left: 50px;
-}
-
-.nav_item,
-.logo {
-  transition: all 0.2s ease-in-out;
-}
-
-.nav_item:hover,
-.logo:hover {
-  transform: scale(1.1);
 }
 
 .pill_container {
@@ -460,6 +443,7 @@
 
   .memes > div {
     width: 100%;
+    margin: 0;
   }
 }
 
@@ -474,12 +458,6 @@
     margin-bottom: 30px;
   }
 
-  .pill_button {
-    font-size: 30px;
-    width: 300px;
-    height: 80px;
-  }
-
   .pill:last-child {
     margin-bottom: 0;
   }
@@ -491,7 +469,28 @@
   }
 
   .pill .detail {
-    font-size: 20px;
+    font-size: 24px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 800px) {
+  .socials_container {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  .socials {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+  }
+
+  .socials img {
+    width: 120px;
+    padding: 0 0 20px;
   }
 }
 

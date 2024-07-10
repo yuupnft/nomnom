@@ -77,17 +77,30 @@ export default function Home() {
       </div>
       {/* About */}
       <div className={`${styles.content_container} ${styles.bg_color2}`}>
-        <div className={`${styles.about} ${gaegu.className} ${styles.h_section_container}`}>
-          <img src="/eiffel.png" alt="Eiffel Tower Nomnom"/>
-          <div>
-            <h1>About $NOMNOM</h1>
-            <p>
-              nomnom is a hungry hamster on the Solana network.
-              This hamster is SO hungry that any-ting is on the menu...<br/>
-            </p>
-            <div className={`${styles.btn} ${gaegu.className}`}>
-              <a href="https://jup.ag/swap/6ZrYhkwvoYE4QqzpdzJ7htEHwT2u2546EkTNJ7qepump-SOL">Buy $NOMNOM</a>
+        <div className={styles.section_container}>
+          <div className={`${styles.about} ${gaegu.className} ${styles.h_section_container}`}>
+            <img src="/eiffel.png" alt="Eiffel Tower Nomnom"/>
+            <div>
+              <h1>About $NOMNOM</h1>
+              <p>
+                nomnom is a hungry hamster on the Solana network.
+                This hamster is SO hungry that any-ting is on the menu...<br/>
+              </p>
+              <div className={`${styles.btn} ${gaegu.className}`}>
+                <a href="https://jup.ag/swap/6ZrYhkwvoYE4QqzpdzJ7htEHwT2u2546EkTNJ7qepump-SOL">Buy $NOMNOM</a>
+              </div>
             </div>
+          </div>
+          <div className={styles.listings}>
+            <a href="https://www.coingecko.com/en/coins/nomnom">
+              <img src="/coingecko.svg" alt="Nomnom - CoinGecko"/>
+            </a>
+            <a href="https://dexscreener.com/solana/6ZrYhkwvoYE4QqzpdzJ7htEHwT2u2546EkTNJ7qepump">
+              <img src="/dexscreener-circle.svg" alt="Nomnom - Dexscreener"/>
+            </a>
+            <a href="https://www.dextools.io/app/en/solana/pair-explorer/Fhmjp6SMtmD8GXkq8tw6aZjBk3sDpKtKKSH6RToLAX3m">
+              <img src="/dextools.svg" alt="Nomnom - DexTools"/>
+            </a>
           </div>
         </div>
       </div>

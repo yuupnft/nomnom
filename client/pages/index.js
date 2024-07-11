@@ -95,6 +95,9 @@ export default function Home() {
             <a href="https://www.coingecko.com/en/coins/nomnom">
               <img src="/coingecko.svg" alt="Nomnom - CoinGecko"/>
             </a>
+            <a href="https://jup.ag/swap/SOL-6ZrYhkwvoYE4QqzpdzJ7htEHwT2u2546EkTNJ7qepump">
+              <img src="/jupiter.svg" alt="Nomnom - Jupiter"/>
+            </a>
             <a href="https://dexscreener.com/solana/6ZrYhkwvoYE4QqzpdzJ7htEHwT2u2546EkTNJ7qepump">
               <img src="/dexscreener-circle.svg" alt="Nomnom - Dexscreener"/>
             </a>
@@ -102,6 +105,7 @@ export default function Home() {
               <img src="/dextools.svg" alt="Nomnom - DexTools"/>
             </a>
           </div>
+          {/*<div className={styles.listings}></div>*/}
         </div>
       </div>
       {/* Meme/Avatar Maker */}
@@ -166,7 +170,7 @@ export default function Home() {
               </div>
               <div className={styles.pill}>
                 <div className={styles.detail}>
-                  Go to <a href="https://jup.ag/swap/6ZrYhkwvoYE4QqzpdzJ7htEHwT2u2546EkTNJ7qepump-SOL">Jupiter</a> and paste the $NOMNOM contract address.
+                  Go to <a className={styles.link} href="https://jup.ag/swap/SOL-6ZrYhkwvoYE4QqzpdzJ7htEHwT2u2546EkTNJ7qepump">Jupiter</a> and paste the $NOMNOM contract address.
                 </div>
               </div>
             </div>

@@ -173,7 +173,7 @@
   margin-bottom: 100px;
 }
 
-.about img {
+.about img.eiffle {
   width: 300px;
   filter: drop-shadow(0px 5px 4px #361a0c);
 }
@@ -208,6 +208,23 @@
   background-color: #ed3b23;
   text-transform: uppercase;
   color: #fff;
+}
+
+.about .btn.moonshot {
+  color: #000000;
+  background-color: #ffffff;
+}
+
+.about .btn img {
+  position: absolute;
+  left: 240px;
+  bottom: 10px;
+  width: 150px;
+}
+
+.about .btn.jupiter img {
+  left: 260px;
+  width: 80px;
 }
 
 .memes img {
@@ -592,6 +609,16 @@
   .token .pill .detail {
     font-size: 24px;
   }
+
+  .about .btn.moonshot img {
+    width: 100px;
+  }
+
+  .about .btn.jupiter img {
+    width: 50px;
+    left: 250px;
+    bottom: 5px;
+  }
 }
 
 @media (max-width: 400px) {
@@ -601,5 +628,15 @@
 
   .landing img {
     width: 200px;
+  }
+
+  .about .btn.moonshot img {
+    width: 100px;
+  }
+
+  .about .btn.jupiter img {
+    width: 50px;
+    left: 250px;
+    bottom: 5px;
   }
 }

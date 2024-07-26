@@ -79,15 +79,20 @@ export default function Home() {
       <div className={`${styles.content_container} ${styles.bg_color2}`}>
         <div className={styles.section_container}>
           <div className={`${styles.about} ${gaegu.className} ${styles.h_section_container}`}>
-            <img src="/eiffel.png" alt="Eiffel Tower Nomnom"/>
+            <img className={styles.eiffel} src="/eiffel.png" alt="Eiffel Tower Nomnom"/>
             <div>
               <h1>About $NOMNOM</h1>
               <p>
                 nomnom is a hungry hamster on the Solana network.
                 This hamster is SO hungry that any-ting is on the menu...<br/>
               </p>
-              <div className={`${styles.btn} ${gaegu.className}`}>
+              <div className={`${styles.btn} ${styles.moonshot} ${gaegu.className}`}>
+                <a href="https://moonshot.money/nomnom?ref=iQDwsTbkZP">Buy $NOMNOM</a>
+                <img src="/apple-pay.png" alt="Buy $NOMNOM with Apple Pay"/>
+              </div>
+              <div className={`${styles.btn} ${styles.jupiter} ${gaegu.className}`}>
                 <a href="https://jup.ag/swap/6ZrYhkwvoYE4QqzpdzJ7htEHwT2u2546EkTNJ7qepump-SOL">Buy $NOMNOM</a>
+                <img src="/jupiter.svg" alt="Nomnom - Jupiter"/>
               </div>
             </div>
           </div>

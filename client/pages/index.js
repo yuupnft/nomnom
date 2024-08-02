@@ -125,6 +125,14 @@ export default function Home() {
             <div className={`${styles.btn} ${gaegu.className}`}>
               <a href="https://nomnom-maker.vercel.app/">Meme Maker</a>
             </div>
+            <br/>
+            <h1>Memes</h1>
+            <p>
+              View memes created by the community!
+            </p>
+            <div className={`${styles.btn} ${gaegu.className}`}>
+              <a href="https://memedepot.com/d/nom-nom">Meme Depot</a>
+            </div>
           </div>
         </div>
       </div>

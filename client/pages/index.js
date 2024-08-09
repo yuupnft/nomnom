@@ -136,8 +136,23 @@ export default function Home() {
           </div>
         </div>
       </div>
+      {/* Nomnom Game */}
+      <div className={`${styles.content_container} ${styles.bg_color2}`}>
+        <div className={`${styles.memes} ${gaegu.className} ${styles.h_section_container}`}>
+          <img src="/nomnom-game.png" alt="Nomnom Game"/>
+          <div>
+            <h1>Nomnom The Game</h1>
+            <p>
+              The first game starring $NOMNOM, designed by a community member!
+            </p>
+            <div className={`${styles.btn} ${gaegu.className}`}>
+              <a href="https://nomnomthegame.com/">Play Nomnom</a>
+            </div>
+          </div>
+        </div>
+      </div>
       {/* How To Buy / Tokenomics */}
-      <div className={`${styles.content_container} ${styles.bg_color2} ${styles.last}`}>
+      <div className={`${styles.content_container}`}>
         <div className={`${styles.token} ${styles.flex_column} ${gaegu.className}`}>
           <div>
             <h1>Tokenomics</h1>
@@ -168,6 +183,10 @@ export default function Home() {
               </div>
             </div>
           </div>
+        </div>
+      </div>
+      <div className={`${styles.content_container} ${styles.bg_color2} ${styles.last}`}>
+        <div className={`${styles.token} ${styles.flex_column} ${gaegu.className}`}>
           <div>
             <h1>How To Buy</h1>
             <div className={styles.pill_container}>

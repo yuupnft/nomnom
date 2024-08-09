@@ -97,6 +97,9 @@ export default function Home() {
             </div>
           </div>
           <div className={styles.listings}>
+            <a href="https://coinmarketcap.com/currencies/nomnom/">
+              <img src="/cmc.svg" alt="Nomnom - CoinMarketCap"/>
+            </a>
             <a href="https://www.coingecko.com/en/coins/nomnom">
               <img src="/coingecko.svg" alt="Nomnom - CoinGecko"/>
             </a>
@@ -138,7 +141,7 @@ export default function Home() {
       </div>
       {/* Nomnom Game */}
       <div className={`${styles.content_container} ${styles.bg_color2}`}>
-        <div className={`${styles.memes} ${gaegu.className} ${styles.h_section_container}`}>
+        <div className={`${styles.media} ${gaegu.className} ${styles.h_section_container}`}>
           <img src="/nomnom-game.png" alt="Nomnom Game"/>
           <div>
             <h1>Nomnom The Game</h1>

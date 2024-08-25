@@ -119,7 +119,7 @@ export default function Home() {
       {/* Meme/Avatar Maker */}
       <div className={styles.content_container}>
         <div className={`${styles.memes} ${gaegu.className} ${styles.h_section_container}`}>
-          <img src="/meme-maker.png" alt="Nomnom Meme Maker"/>
+          <img src="/meme-maker2.png" alt="Nomnom Meme Maker"/>
           <div>
             <h1>Meme/Avatar Maker</h1>
             <p>

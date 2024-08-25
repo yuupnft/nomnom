@@ -126,7 +126,7 @@ export default function Home() {
               Created by a talented community member, the tool can be used to easily create $NOMNOM memes and avatars!
             </p>
             <div className={`${styles.btn} ${gaegu.className}`}>
-              <a href="https://nomnom-maker.vercel.app/">Meme Maker</a>
+              <a href="https://nomnom-meme-maker.vercel.app/">Meme Maker</a>
             </div>
             <br/>
             <h1>Memes</h1>

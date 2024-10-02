@@ -9,6 +9,8 @@ import {Jua} from 'next/font/google';
 import {Gaegu} from 'next/font/google';
 
 import { useEffect, useState } from 'react';
+import Button from "@/components/Button";
+import Buy from "@/components/Buy";
 
 const rubik = Rubik({
   weight: '400',
@@ -86,14 +88,17 @@ export default function Home() {
                 nomnom is a hungry hamster on the Solana network.
                 This hamster is SO hungry that any-ting is on the menu...<br/>
               </p>
-              <div className={`${styles.btn} ${styles.moonshot} ${gaegu.className}`}>
-                <a href="https://moonshot.money/nomnom?ref=iQDwsTbkZP">Buy $NOMNOM</a>
-                <img src="/apple-pay.png" alt="Buy $NOMNOM with Apple Pay"/>
-              </div>
-              <div className={`${styles.btn} ${styles.jupiter} ${gaegu.className}`}>
-                <a href="https://jup.ag/swap/6ZrYhkwvoYE4QqzpdzJ7htEHwT2u2546EkTNJ7qepump-SOL">Buy $NOMNOM</a>
-                <img src="/jupiter.svg" alt="Nomnom - Jupiter"/>
-              </div>
+              <Button name={"Buy $NOMNOM"} link={"#buy"} />
+
+              {/*<div className={`${styles.btn} ${styles.moonshot} ${gaegu.className}`}>*/}
+              {/*  <a href="https://moonshot.money/nomnom?ref=iQDwsTbkZP">Buy $NOMNOM</a>*/}
+              {/*  <img src="/apple-pay.png" alt="Buy $NOMNOM with Apple Pay"/>*/}
+              {/*</div>*/}
+
+              {/*<div className={`${styles.btn} ${styles.jupiter} ${gaegu.className}`}>*/}
+              {/*  <a href="https://jup.ag/swap/6ZrYhkwvoYE4QqzpdzJ7htEHwT2u2546EkTNJ7qepump-SOL">Buy $NOMNOM</a>*/}
+              {/*  <img src="/jupiter.svg" alt="Nomnom - Jupiter"/>*/}
+              {/*</div>*/}
             </div>
           </div>
           <div className={styles.listings}>
@@ -125,17 +130,20 @@ export default function Home() {
             <p>
               Created by a talented community member, the tool can be used to easily create $NOMNOM memes and avatars!
             </p>
-            <div className={`${styles.btn} ${gaegu.className}`}>
-              <a href="https://nomnom-meme-maker.vercel.app/">Meme Maker</a>
-            </div>
+            <Button name={"Meme Maker"} link={"https://nomnom-meme-maker.vercel.app/"} />
+            {/*<div className={`${styles.btn} ${gaegu.className}`}>*/}
+            {/*  <a href="https://nomnom-meme-maker.vercel.app/">Meme Maker</a>*/}
+            {/*</div>*/}
             <br/>
             <h1>Memes</h1>
             <p>
               View memes created by the community!
             </p>
-            <div className={`${styles.btn} ${gaegu.className}`}>
-              <a href="https://memedepot.com/d/nom-nom">Meme Depot</a>
-            </div>
+            <Button name={"Meme Depot"} link={"https://memedepot.com/d/nom-nom"} />
+
+            {/*<div className={`${styles.btn} ${gaegu.className}`}>*/}
+            {/*  <a href="https://memedepot.com/d/nom-nom">Meme Depot</a>*/}
+            {/*</div>*/}
           </div>
         </div>
       </div>
@@ -148,9 +156,11 @@ export default function Home() {
             <p>
               The first game starring $NOMNOM, designed by a community member!
             </p>
-            <div className={`${styles.btn} ${gaegu.className}`}>
-              <a href="https://nomnomthegame.com/">Play Nomnom</a>
-            </div>
+            <Button name={"Play Nomnom"} link={"https://nomnomthegame.com/"}/>
+
+            {/*<div className={`${styles.btn} ${gaegu.className}`}>*/}
+            {/*  <a href="https://nomnomthegame.com/">Play Nomnom</a>*/}
+            {/*</div>*/}
           </div>
         </div>
       </div>
@@ -191,24 +201,7 @@ export default function Home() {
       <div className={`${styles.content_container} ${styles.bg_color2} ${styles.last}`}>
         <div className={`${styles.token} ${styles.flex_column} ${gaegu.className}`}>
           <div>
-            <h1>How To Buy</h1>
-            <div className={styles.pill_container}>
-              <div className={styles.pill}>
-                <div className={styles.detail}>
-                  Download Phantom
-                </div>
-              </div>
-              <div className={styles.pill}>
-                <div className={styles.detail}>
-                  Buy or deposit Solana into your wallet.
-                </div>
-              </div>
-              <div className={styles.pill}>
-                <div className={styles.detail}>
-                  Go to <a className={styles.link} href="https://jup.ag/swap/SOL-6ZrYhkwvoYE4QqzpdzJ7htEHwT2u2546EkTNJ7qepump">Jupiter</a> and paste the $NOMNOM contract address.
-                </div>
-              </div>
-            </div>
+            <Buy />
             {/* Join Our Community */}
             <div className={styles.socials_container}>
               <h1>Socials</h1>

@@ -89,16 +89,6 @@ export default function Home() {
                 This hamster is SO hungry that any-ting is on the menu...<br/>
               </p>
               <Button name={"Buy $NOMNOM"} link={"#buy"} />
-
-              {/*<div className={`${styles.btn} ${styles.moonshot} ${gaegu.className}`}>*/}
-              {/*  <a href="https://moonshot.money/nomnom?ref=iQDwsTbkZP">Buy $NOMNOM</a>*/}
-              {/*  <img src="/apple-pay.png" alt="Buy $NOMNOM with Apple Pay"/>*/}
-              {/*</div>*/}
-
-              {/*<div className={`${styles.btn} ${styles.jupiter} ${gaegu.className}`}>*/}
-              {/*  <a href="https://jup.ag/swap/6ZrYhkwvoYE4QqzpdzJ7htEHwT2u2546EkTNJ7qepump-SOL">Buy $NOMNOM</a>*/}
-              {/*  <img src="/jupiter.svg" alt="Nomnom - Jupiter"/>*/}
-              {/*</div>*/}
             </div>
           </div>
           <div className={styles.listings}>
@@ -118,7 +108,6 @@ export default function Home() {
               <img src="/dextools.svg" alt="Nomnom - DexTools"/>
             </a>
           </div>
-          {/*<div className={styles.listings}></div>*/}
         </div>
       </div>
       {/* Meme/Avatar Maker */}
@@ -131,19 +120,12 @@ export default function Home() {
               Created by a talented community member, the tool can be used to easily create $NOMNOM memes and avatars!
             </p>
             <Button name={"Meme Maker"} link={"https://nomnom-meme-maker.vercel.app/"} />
-            {/*<div className={`${styles.btn} ${gaegu.className}`}>*/}
-            {/*  <a href="https://nomnom-meme-maker.vercel.app/">Meme Maker</a>*/}
-            {/*</div>*/}
             <br/>
             <h1>Memes</h1>
             <p>
               View memes created by the community!
             </p>
             <Button name={"Meme Depot"} link={"https://memedepot.com/d/nom-nom"} />
-
-            {/*<div className={`${styles.btn} ${gaegu.className}`}>*/}
-            {/*  <a href="https://memedepot.com/d/nom-nom">Meme Depot</a>*/}
-            {/*</div>*/}
           </div>
         </div>
       </div>
@@ -157,15 +139,11 @@ export default function Home() {
               The first game starring $NOMNOM, designed by a community member!
             </p>
             <Button name={"Play Nomnom"} link={"https://nomnomthegame.com/"}/>
-
-            {/*<div className={`${styles.btn} ${gaegu.className}`}>*/}
-            {/*  <a href="https://nomnomthegame.com/">Play Nomnom</a>*/}
-            {/*</div>*/}
           </div>
         </div>
       </div>
       {/* How To Buy / Tokenomics */}
-      <div className={`${styles.content_container}`}>
+      <div className={`${styles.content_container} ${styles.tokenomics}`}>
         <div className={`${styles.token} ${styles.flex_column} ${gaegu.className}`}>
           <div>
             <h1>Tokenomics</h1>
@@ -222,6 +200,16 @@ export default function Home() {
               </div>
             </div>
           </div>
+
+          <div className={styles.legal}>
+            <p>
+              Legal Disclaimer: $NOMNOM is a meme coin with no intrinsic value or expectation of financial return. $NOMNOM is for entertainment purposes only.
+            </p>
+            <div className={styles.contact}>
+              <div>team@nomnomsol.com</div>
+            </div>
+          </div>
+
           <div className={styles.footer}>
             <img src="/feet.png" alt="Nomnom feet"/>
           </div>

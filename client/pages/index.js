@@ -9,6 +9,7 @@ import {Jua} from 'next/font/google';
 import {Gaegu} from 'next/font/google';
 
 import { useEffect, useState } from 'react';
+
 import Button from "@/components/Button";
 import Buy from "@/components/Buy";
 
@@ -119,7 +120,7 @@ export default function Home() {
             <p>
               Created by a talented community member, the tool can be used to easily create $NOMNOM memes and avatars!
             </p>
-            <Button name={"Meme Maker"} link={"https://nomnom-meme-maker.vercel.app/"} />
+            <Button name={"Try Now"} link={"/memes"} />
             <br/>
             <h1>Memes</h1>
             <p>

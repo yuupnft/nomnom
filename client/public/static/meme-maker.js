@@ -239,11 +239,11 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     const folders = {
-      general: 56,
-      cartoon: 43,
+      general: 61,
+      cartoon: 58,
       brands: 8,
       gang: 18,
-      music: 5,
+      music: 7,
       bdsm: 7,
     };
 

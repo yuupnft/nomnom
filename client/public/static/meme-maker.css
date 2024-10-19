@@ -171,47 +171,6 @@ canvas {
   height: auto;
 }
 
-@media (max-width: 900px) {
-
-  .canvas-container {
-    /*height: 300px !important;*/
-  }
-
-  /*canvas {*/
-  /*  border: 2px dashed #fff;*/
-  /*  position: absolute;*/
-  /*  left: 0;*/
-  /*  right: 0;*/
-  /*  margin-inline: auto;*/
-  /*}*/
-
-}
-
-@media (max-width: 500px) {
-
-  .canvas-container {
-    /*height: 300px !important;*/
-  }
-
-  /*canvas {*/
-  /*  border: 2px dashed #fff;*/
-
-  /*  position: absolute;*/
-  /*  left: 0;*/
-  /*  right: 0;*/
-  /*  margin-inline: auto;*/
-  /*}*/
-
-  header {
-    width: 90vw;
-    margin: 0 auto;
-  }
-
-  .action-buttons {
-    height: auto;
-  }
-}
-
 #presetstitle {
   font-size: 24px;
 }
@@ -288,4 +247,34 @@ canvas {
   display: flex;
   justify-content: center;
   width: 100%;
+}
+
+@media (max-width: 500px) {
+  header {
+    width: 90vw;
+    margin: 0 auto;
+  }
+
+  .action-buttons {
+    height: auto;
+  }
+
+  .text-controls:not(.checkbox) {
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+  }
+
+  .text-controls input[type="text"] {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .text-controls input[type="number"] {
+    margin-top: 10px;
+  }
+
+  #textColor {
+    top: 0;
+  }
 }

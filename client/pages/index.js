@@ -1,3 +1,6 @@
+import { useEffect, useState } from 'react';
+import axios from 'axios';
+
 import styles from '../styles/Home.module.css';
 
 import NavBar from "@/components/NavBar";
@@ -7,8 +10,6 @@ import {Bowlby_One} from 'next/font/google';
 import {Itim} from 'next/font/google';
 import {Jua} from 'next/font/google';
 import {Gaegu} from 'next/font/google';
-
-import { useEffect, useState } from 'react';
 
 import Button from "@/components/Button";
 import Buy from "@/components/Buy";
@@ -38,10 +39,23 @@ const gaegu = Gaegu({
   subsets: ['latin']
 });
 
+const baseUrl = 'https://nomnom.onrender.com/api/metadata';
+//const baseUrl = 'http://localhost:3001/api/metadata';
+
 export default function Home() {
+  const [totalSupply, setTotalSupply] = useState('~999864338');
+
   useEffect(() => {
     function setup() {
-
+      async function getData() {
+        axios.get(baseUrl + '/totalsupply')
+          .then((data) => {
+            setTotalSupply(data.data);
+          }, () => {
+            console.error("Could not connect to API service.");
+          });
+      }
+      getData();
     }
     setup();
   }, []);
@@ -162,7 +176,15 @@ export default function Home() {
                   Total Supply
                 </div>
                 <div className={styles.detail}>
-                  1.000.000.000
+                  {totalSupply}
+                </div>
+              </div>
+              <div className={styles.pill}>
+                <div className={styles.header}>
+                  Max Supply
+                </div>
+                <div className={styles.detail}>
+                  1,000,000,000
                 </div>
               </div>
               <div className={styles.pill}>

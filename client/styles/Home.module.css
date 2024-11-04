@@ -506,6 +506,10 @@
     font-size: 24px;
     text-align: center;
   }
+
+  .token .pill .detail {
+    font-size: 24px;
+  }
 }
 
 @media (max-width: 800px) {
@@ -605,10 +609,6 @@
 
   .media h1 {
     font-size: 48px;
-  }
-
-  .token .pill .detail {
-    font-size: 24px;
   }
 }
 

@@ -39,7 +39,7 @@ const gaegu = Gaegu({
   subsets: ['latin']
 });
 
-const baseUrl = 'https://nomnom.onrender.com/api/metadata';
+const baseUrl = 'https://nomnom-1u79.onrender.com/api/metadata';
 //const baseUrl = 'http://localhost:3001/api/metadata';
 
 export default function Home() {

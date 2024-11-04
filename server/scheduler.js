@@ -4,7 +4,7 @@ import * as dotenv from "dotenv";
 
 dotenv.config({ path: ".env" });
 
-const baseUrl = 'https://nomnom.onrender.com/api/ping';
+const baseUrl = 'https://nomnom-1u79.onrender.com/api/ping';
 //const baseUrl = 'http://localhost:3001/api/ping';
 
 const scheduler = new ToadScheduler();

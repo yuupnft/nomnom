@@ -134,7 +134,8 @@ export default function Home() {
             <p>
               Created by a talented community member, the tool can be used to easily create $NOMNOM memes and avatars!
             </p>
-            <Button name={"Try Now"} link={"/memes"} />
+            {/*<Button name={"Try Now"} link={"/memes"} />*/}
+            <Button name={"Try Now"} link={"https://nomnom-meme-maker.vercel.app/"} />
             <br/>
             <h1>Memes</h1>
             <p>

@@ -215,7 +215,7 @@ export default function Home() {
                 <a href="https://t.me/NomNom_on_Solana">
                   <img src="/telegram.svg" alt="Nomnom - Telegram"/>
                 </a>
-                <a href="https://www.instagram.com/nomnom_solana">
+                <a href="https://www.instagram.com/nomnom.hungry.hamster">
                   <img src="/instagram.svg" alt="Nomnom - Instagram"/>
                 </a>
                 <a href="https://www.reddit.com/r/nomnom_solana/">

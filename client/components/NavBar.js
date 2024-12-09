@@ -1,4 +1,3 @@
-import { useEffect, useState } from 'react';
 import styles from '../styles/NavBar.module.css';
 
 import {Rubik} from 'next/font/google';
@@ -25,7 +24,7 @@ export default function NavBar(props) {
             <a href="#buy">Buy $NOMNOM</a>
           </div>
           <div className={`${styles.nav_item}`}>
-            <a href="https://twitter.com/nomnom_solana">
+            <a href="https://twitter.com/nomnom_hamster">
               <img src="/twitter.svg" alt="Nomnom - Twitter"/>
             </a>
           </div>

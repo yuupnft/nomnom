@@ -209,7 +209,7 @@ export default function Home() {
               <h1>Socials</h1>
               <p>Join the $NOMNOM Community</p>
               <div className={styles.socials}>
-                <a href="https://twitter.com/nomnom_hamster">
+                <a href="https://twitter.com/nomnom_solana">
                   <img src="/twitter.svg" alt="Nomnom - Twitter"/>
                 </a>
                 <a href="https://t.me/NomNom_on_Solana">

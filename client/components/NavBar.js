@@ -24,7 +24,7 @@ export default function NavBar(props) {
             <a href="#buy">Buy $NOMNOM</a>
           </div>
           <div className={`${styles.nav_item}`}>
-            <a href="https://twitter.com/nomnom_hamster">
+            <a href="https://twitter.com/nomnom_solana">
               <img src="/twitter.svg" alt="Nomnom - Twitter"/>
             </a>
           </div>

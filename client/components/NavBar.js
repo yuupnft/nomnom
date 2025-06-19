@@ -17,7 +17,7 @@ export default function NavBar(props) {
     <nav className={styles.navbar}>
       <div className={`${styles.container}`}>
         <a href="#" className={styles.logo}>
-          <img src="/logo-nav.png" alt="Nomnom Logo"/>
+          <img src="/logo-nav-bday.png" alt="Nomnom Logo"/>
         </a>
         <div className={`${styles.nav_links} ${rubik.className}`}>
           <div className={`${styles.btn} ${styles.nav_item} ${gaegu.className}`}>

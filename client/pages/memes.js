@@ -44,7 +44,7 @@ export default function Memes() {
         </head>
         <body class="gaegu-regular">
           <header>
-              <img src="/logo-nav.png" alt="nomnom logo"/>
+              <img src="/logo-nav-bday.png" alt="nomnom logo"/>
           </header>
           <div class="container gaegu-regular">
               <div>

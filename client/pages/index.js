@@ -88,7 +88,7 @@ export default function Home() {
             </div>
           </div>
           <div className={styles.landing}>
-            <img src="/landing.png" alt="Nomnom"/>
+            <img src="/landing-bday.png" alt="Nomnom"/>
           </div>
         </div>
       </div>
@@ -96,7 +96,7 @@ export default function Home() {
       <div className={`${styles.content_container} ${styles.bg_color2}`}>
         <div className={styles.section_container}>
           <div className={`${styles.about} ${gaegu.className} ${styles.h_section_container}`}>
-            <img className={styles.eiffel} src="/eiffel.png" alt="Eiffel Tower Nomnom"/>
+            <img className={styles.eiffel} src="/eiffel-bday.png" alt="Eiffel Tower Nomnom"/>
             <div>
               <h1>About $NOMNOM</h1>
               <p>
@@ -235,7 +235,7 @@ export default function Home() {
           </div>
 
           <div className={styles.footer}>
-            <img src="/feet.png" alt="Nomnom feet"/>
+            <img src="/feet-bday.png" alt="Nomnom feet"/>
           </div>
         </div>
       </div>

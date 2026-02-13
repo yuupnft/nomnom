@@ -134,8 +134,7 @@ export default function Home() {
             <p>
               Created by a talented community member, the tool can be used to easily create $NOMNOM memes and avatars!
             </p>
-            {/*<Button name={"Try Now"} link={"/memes"} />*/}
-            <Button name={"Try Now"} link={"https://nomnom-meme-maker.vercel.app/"} />
+            <Button name={"Try Now"} link={"/memes"} />
             <br/>
             <h1>Memes</h1>
             <p>
@@ -146,18 +145,18 @@ export default function Home() {
         </div>
       </div>
       {/* Nomnom Game */}
-      <div className={`${styles.content_container} ${styles.bg_color2}`}>
-        <div className={`${styles.media} ${gaegu.className} ${styles.h_section_container}`}>
-          <img src="/nomnom-game.png" alt="Nomnom Game"/>
-          <div>
-            <h1>Nomnom The Game</h1>
-            <p>
-              The first game starring $NOMNOM, designed by a community member!
-            </p>
-            <Button name={"Play Nomnom"} link={"https://nomnomthegame.com/"}/>
-          </div>
-        </div>
-      </div>
+      {/*<div className={`${styles.content_container} ${styles.bg_color2}`}>*/}
+      {/*  <div className={`${styles.media} ${gaegu.className} ${styles.h_section_container}`}>*/}
+      {/*    <img src="/nomnom-game.png" alt="Nomnom Game"/>*/}
+      {/*    <div>*/}
+      {/*      <h1>Nomnom The Game</h1>*/}
+      {/*      <p>*/}
+      {/*        The first game starring $NOMNOM, designed by a community member!*/}
+      {/*      </p>*/}
+      {/*      <Button name={"Play Nomnom"} link={"https://nomnomthegame.com/"}/>*/}
+      {/*    </div>*/}
+      {/*  </div>*/}
+      {/*</div>*/}
       {/* How To Buy / Tokenomics */}
       <div className={`${styles.content_container} ${styles.tokenomics}`}>
         <div className={`${styles.token} ${styles.flex_column} ${gaegu.className}`}>

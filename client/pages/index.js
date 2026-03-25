@@ -141,7 +141,7 @@ export default function Home() {
               </p>
               <p className="font-gaegu text-xl text-nomnom-brown leading-relaxed mb-6">
                 Born as a memecoin on Solana ⚡, nomnom&apos;s chaotic appetite has earned him
-                a whole community of fans who just love watching him eat. rawr 🐹
+                a whole community of fans who just love watching him eat. nom 🐹
               </p>
               <div className="flex flex-wrap gap-3 justify-center md:justify-start">
                 <a href="#buy" className="btn-kawaii text-base px-5 py-2.5">

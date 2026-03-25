@@ -5,7 +5,7 @@ const SERVER_URL = process.env.NEXT_PUBLIC_SERVER_URL || 'https://nomnom-1u79.on
 
 const LOADING_MESSAGES = [
   'nomnom is eating...',
-  'rawr... searching for snacks...',
+  'nom... searching for snacks...',
   'nom nom nom nom nom...',
   'hunting for the perfect ting...',
   'chewing... please wait...',

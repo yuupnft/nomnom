@@ -45,7 +45,7 @@ const PLACEHOLDER_LABELS = [
   'they mentioned nomnom ★',
   'nom nom nom nom nom',
   'another one gets eaten',
-  'rawr 🐹',
+  'nom 🐹',
   'nom ate their tweet',
   'everyone loves nomnom',
   'eating all their content',

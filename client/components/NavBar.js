@@ -32,7 +32,7 @@ export default function NavBar() {
           {/* Logo */}
           <a href="#" className="flex-shrink-0 hover:scale-105 transition-transform duration-200">
             <img
-              src="/logo-nav-bday.png"
+              src="/logo-nav.png"
               alt="Nomnom Logo"
               className="h-10 md:h-14 w-auto drop-shadow-md"
             />

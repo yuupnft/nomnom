@@ -3,6 +3,17 @@ import express from 'express';
 import axios from 'axios';
 import { scheduler, job } from './scheduler.js';
 
+// All available meme preset paths (served as Next.js static files)
+// Categories: general (67), music (8), brands (10), cartoon (90), gang (18)
+// bdsm category intentionally excluded by default
+const MEME_PATHS = [
+  ...Array.from({ length: 67 }, (_, i) => `/presets/general/${i}.png`),
+  ...Array.from({ length: 8 }, (_, i) => `/presets/music/${i}.png`),
+  ...Array.from({ length: 10 }, (_, i) => `/presets/brands/${i}.png`),
+  ...Array.from({ length: 90 }, (_, i) => `/presets/cartoon/${i}.png`),
+  ...Array.from({ length: 18 }, (_, i) => `/presets/gang/${i}.png`),
+];
+
 const app = express();
 app.use(cors());
 app.use(express.json());
@@ -49,6 +60,11 @@ app.get("/api/metadata/totalsupply", async (req, res) => {
     console.error(e);
     res.send('');
   }
+});
+
+app.get("/api/memes/random", (req, res) => {
+  const randomIndex = Math.floor(Math.random() * MEME_PATHS.length);
+  res.json({ url: MEME_PATHS[randomIndex] });
 });
 
 app.get("/api/metadata/circulatingsupply", async (req, res) => {

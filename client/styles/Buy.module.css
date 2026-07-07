@@ -1,9 +1,0 @@
-.jup {
-  width: 200px;
-}
-
-@media (max-width: 930px) {
-  .jup {
-    width: 80px;
-  }
-}

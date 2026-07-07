@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function () {
+function __nomnomMemeMakerInit() {
   function waitVariableExists(variableName, timeout) {
     return new Promise(resolve => {
       const intervalId = setInterval(() => {
@@ -731,4 +731,15 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   go();
-});
+}
+
+// This script can either be parsed as part of the initial page load (in which
+// case DOMContentLoaded hasn't fired yet) or injected dynamically after a
+// client-side route change (in which case the document is already fully
+// loaded and DOMContentLoaded already fired, so waiting for it again would
+// hang forever). Handle both.
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', __nomnomMemeMakerInit);
+} else {
+  __nomnomMemeMakerInit();
+}

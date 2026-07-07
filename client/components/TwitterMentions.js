@@ -1,5 +1,18 @@
+import { Component } from 'react';
 import Marquee from 'react-fast-marquee';
 import { Tweet } from 'react-tweet';
+
+// react-tweet throws when a tweet's shape doesn't match what it expects
+// (e.g. reply-chain tweets) — catch that per-tweet so one bad ID can't crash the page.
+class TweetErrorBoundary extends Component {
+  state = { hasError: false };
+  static getDerivedStateFromError() {
+    return { hasError: true };
+  }
+  render() {
+    return this.state.hasError ? this.props.fallback : this.props.children;
+  }
+}
 
 // Replace these tweet IDs with real ones when available.
 // Tweet ID is the number at the end of the tweet URL:
@@ -55,7 +68,7 @@ export default function TwitterMentions() {
   const hasTweets = TWEET_IDS.length > 0;
 
   return (
-    <section className="relative py-12 sm:py-16 overflow-hidden bg-nomnom-blush border-y-2 border-nomnom-brown">
+    <section className="relative py-12 sm:py-16 overflow-hidden bg-nomnom-sky">
       {/* Background decorations */}
       <span className="sparkle-star text-2xl" style={{ top: '15%', left: '3%', animationDelay: '0.3s' }}>★</span>
       <span className="sparkle-star text-xl" style={{ top: '60%', right: '2%', animationDelay: '0.7s' }}>★</span>
@@ -70,25 +83,30 @@ export default function TwitterMentions() {
         </p>
       </div>
 
-      {/* Marquee */}
-      <Marquee
-        gradient={false}
-        speed={40}
-        className="overflow-hidden"
-      >
-        {hasTweets ? (
-          TWEET_IDS.map((id) => (
-            <div key={id} className="mx-3 flex-shrink-0" style={{ maxWidth: 320 }}>
-              <Tweet id={id} />
-            </div>
-          ))
-        ) : (
-          // Show placeholder cards when no tweet IDs are set
-          [...PLACEHOLDER_LABELS, ...PLACEHOLDER_LABELS].map((label, i) => (
-            <PlaceholderCard key={i} label={label} />
-          ))
-        )}
-      </Marquee>
+      {/* Marquee — wrapped in "light" so tweet cards always render Twitter's light
+          theme instead of flipping to a dark navy card on visitors' dark-mode OS setting */}
+      <div className="light">
+        <Marquee
+          gradient={false}
+          speed={40}
+          className="overflow-hidden"
+        >
+          {hasTweets ? (
+            TWEET_IDS.map((id, i) => (
+              <div key={id} className="mx-3 flex-shrink-0" style={{ maxWidth: 320 }}>
+                <TweetErrorBoundary fallback={<PlaceholderCard label={PLACEHOLDER_LABELS[i % PLACEHOLDER_LABELS.length]} />}>
+                  <Tweet id={id} />
+                </TweetErrorBoundary>
+              </div>
+            ))
+          ) : (
+            // Show placeholder cards when no tweet IDs are set
+            [...PLACEHOLDER_LABELS, ...PLACEHOLDER_LABELS].map((label, i) => (
+              <PlaceholderCard key={i} label={label} />
+            ))
+          )}
+        </Marquee>
+      </div>
 
 
 {!hasTweets && (

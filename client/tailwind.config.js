@@ -7,15 +7,18 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        'nomnom-white': '#FAFAF8',
+        'nomnom-cream': '#F4F1EB',
+        'nomnom-ink': '#1A1209',
         'nomnom-orange': '#FFD49B',
         'nomnom-pink': '#FF69B4',
         'nomnom-deep-orange': '#FF6B35',
-        'nomnom-cream': '#FFF0E8',
-        'nomnom-blush': '#FFE4F0',
+        'nomnom-blush': '#FFD6E7',
         'nomnom-brown': '#361A0C',
         'nomnom-red': '#ED3B23',
         'nomnom-yellow': '#FFE066',
         'nomnom-mint': '#B8F0D0',
+        'nomnom-sky': '#BEE3F8',
       },
       fontFamily: {
         gaegu: ['Gaegu', 'cursive'],

@@ -1,17 +1,31 @@
 import { useEffect } from 'react';
 
 export default function Memes() {
-  // useEffect(() => {
-  //   // Optionally load external JavaScript here if needed
-  //   const firstScript = document.createElement('script');
-  //   firstScript.src = 'https://cdnjs.cloudflare.com/ajax/libs/fabric.js/5.3.1/fabric.min.js'; // Example for external JS
-  //   firstScript.onload = function() {
-  //     const secondScript = document.createElement('script');
-  //     secondScript.src = '/static/meme-maker.js'; // Example for external JS
-  //     document.body.appendChild(secondScript);
-  //   }
-  //   document.body.appendChild(firstScript);
-  // }, []);
+  // The page body below is injected via dangerouslySetInnerHTML, so <script>
+  // tags inside it never execute when this page is reached via client-side
+  // navigation (only on a hard page load) — browsers only run scripts that
+  // are parsed as part of a real HTML document, not ones set via innerHTML.
+  // Loading them here instead, after the markup above has actually mounted,
+  // makes the editor work regardless of how the page was navigated to.
+  useEffect(() => {
+    const fabricScript = document.createElement('script');
+    fabricScript.src = 'https://cdnjs.cloudflare.com/ajax/libs/fabric.js/5.3.1/fabric.min.js';
+
+    let memeMakerScript = null;
+    fabricScript.onload = () => {
+      memeMakerScript = document.createElement('script');
+      memeMakerScript.src = '/static/meme-maker.js';
+      document.body.appendChild(memeMakerScript);
+    };
+    document.body.appendChild(fabricScript);
+
+    return () => {
+      document.body.removeChild(fabricScript);
+      if (memeMakerScript) {
+        document.body.removeChild(memeMakerScript);
+      }
+    };
+  }, []);
 
   return (
     <div>
@@ -102,8 +116,6 @@ export default function Memes() {
                   <div id="accordion"></div>
               </div>
           </div>
-          <script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/5.3.1/fabric.min.js"></script>
-          <script src="/static/meme-maker.js"></script>
         </body>
         </html>
       `}} />

@@ -8,7 +8,7 @@
   }
 
   body {
-    @apply bg-nomnom-orange font-rubik text-nomnom-brown;
+    @apply bg-nomnom-white font-rubik text-nomnom-ink;
   }
 
   * {
@@ -71,7 +71,7 @@
   }
 
   .section-heading {
-    @apply font-gaegu text-3xl md:text-4xl lg:text-5xl font-bold text-nomnom-brown;
+    @apply font-gaegu text-3xl md:text-4xl lg:text-5xl font-bold text-nomnom-ink;
   }
 
   .sparkle-star {
@@ -79,37 +79,3 @@
   }
 }
 
-/* react-tweet overrides for kawaii theme */
-.react-tweet-theme {
-  --tweet-container-margin: 0 !important;
-}
-
-[data-theme='light'] .react-tweet-theme {
-  --tweet-bg-color: #FFF0E8 !important;
-  --tweet-border: 2px solid #361A0C !important;
-  border-radius: 1.5rem !important;
-  box-shadow: 4px 4px 0px #361A0C !important;
-  overflow: hidden !important;
-}
-
-/* Dexscreener embed */
-#dexscreener-embed {
-  position: relative;
-  width: 100%;
-  padding-bottom: 125%;
-}
-
-#dexscreener-embed iframe {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  border: 0;
-}
-
-@media (min-width: 1400px) {
-  #dexscreener-embed {
-    padding-bottom: 50%;
-  }
-}

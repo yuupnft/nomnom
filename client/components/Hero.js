@@ -1,124 +1,79 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
-const CONTRACT_ADDRESS = '6ZrYhkwvoYE4QqzpdzJ7htEHwT2u2546EkTNJ7qepump';
-
-const SPARKLES = [
-  { top: '12%', left: '8%', size: 'text-3xl', delay: '0s' },
-  { top: '20%', right: '10%', size: 'text-4xl', delay: '0.4s' },
-  { top: '60%', left: '5%', size: 'text-2xl', delay: '0.8s' },
-  { top: '75%', right: '8%', size: 'text-3xl', delay: '0.2s' },
-  { top: '35%', left: '15%', size: 'text-xl', delay: '1s' },
-  { top: '50%', right: '15%', size: 'text-2xl', delay: '0.6s' },
-  { top: '85%', left: '20%', size: 'text-xl', delay: '1.2s' },
-  { top: '10%', left: '45%', size: 'text-lg', delay: '0.3s' },
+// Each entry is a fully-drawn "nomnom eating ___" image, cycled in the hero.
+// Add new files to client/public/nomnom-eating/ and list them here.
+const NOMNOM_EATING_IMAGES = [
+  { src: '/nomnom-eating/banana.png', alt: 'Nomnom eating a banana' },
+  { src: '/nomnom-eating/chip.png', alt: 'Nomnom eating a chip' },
+  { src: '/nomnom-eating/crayon.png', alt: 'Nomnom eating a crayon' },
+  { src: '/nomnom-eating/dice.png', alt: 'Nomnom eating dice' },
+  { src: '/nomnom-eating/eraser.png', alt: 'Nomnom eating an eraser' },
+  { src: '/nomnom-eating/heart.png', alt: 'Nomnom eating a heart' },
+  { src: '/nomnom-eating/hello-kitty.png', alt: 'Nomnom eating Hello Kitty' },
+  { src: '/nomnom-eating/keyblade.png', alt: 'Nomnom eating a keyblade' },
+  { src: '/nomnom-eating/kfc.png', alt: 'Nomnom eating KFC' },
+  { src: '/nomnom-eating/ocarina.png', alt: 'Nomnom eating an ocarina' },
+  { src: '/nomnom-eating/pizza-rolls.png', alt: 'Nomnom eating pizza rolls' },
+  { src: '/nomnom-eating/pokeball.png', alt: 'Nomnom eating a pokeball' },
+  { src: '/nomnom-eating/popcorn.png', alt: 'Nomnom eating popcorn' },
+  { src: '/nomnom-eating/question-box.png', alt: 'Nomnom eating a question box' },
+  { src: '/nomnom-eating/recycle.png', alt: 'Nomnom eating a recycle symbol' },
+  { src: '/nomnom-eating/tongue.png', alt: 'Nomnom eating a tongue' },
 ];
 
-export default function Hero() {
-  const [copied, setCopied] = useState(false);
+const FLIP_INTERVAL_MS = 3500;
+const FADE_MS = 400;
 
-  const handleCopy = () => {
-    navigator.clipboard.writeText(CONTRACT_ADDRESS).then(() => {
-      setCopied(true);
-      setTimeout(() => setCopied(false), 2000);
-    });
-  };
+export default function Hero() {
+  const [index, setIndex] = useState(0);
+  const [fading, setFading] = useState(false);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setFading(true);
+      setTimeout(() => {
+        setIndex((i) => (i + 1) % NOMNOM_EATING_IMAGES.length);
+        setFading(false);
+      }, FADE_MS);
+    }, FLIP_INTERVAL_MS);
+    return () => clearInterval(interval);
+  }, []);
+
+  const current = NOMNOM_EATING_IMAGES[index];
 
   return (
-    <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden
-                        bg-gradient-to-b from-nomnom-orange via-nomnom-orange to-nomnom-blush
-                        pt-20 pb-16 px-4">
-      {/* Decorative sparkle stars */}
-      {SPARKLES.map((s, i) => (
-        <span
-          key={i}
-          className={`sparkle-star ${s.size}`}
-          style={{
-            top: s.top,
-            left: s.left,
-            right: s.right,
-            animationDelay: s.delay,
-          }}
-        >
-          ★
-        </span>
-      ))}
+    <section className="min-h-screen flex flex-col items-center justify-center bg-nomnom-white pt-20 pb-16 px-4">
+      <div className="text-center flex flex-col items-center gap-2">
+        <h1 className="font-bowlby text-6xl sm:text-7xl md:text-8xl lg:text-9xl text-nomnom-ink tracking-tight">
+          NOMNOM
+        </h1>
 
-      {/* Floating nomnom character */}
-      <div className="animate-bounce-slow mb-4 md:mb-6 drop-shadow-2xl">
-        <img
-          src="/landing.png"
-          alt="Nomnom the Hungry Hamster"
-          className="w-48 sm:w-60 md:w-72 lg:w-80 xl:w-96 h-auto"
-        />
-      </div>
-
-      {/* Title */}
-      <div className="text-center mb-3">
-        <img
-          src="/landing-title.png"
-          alt="NOMNOM"
-          className="w-64 sm:w-80 md:w-96 lg:w-[28rem] h-auto mx-auto drop-shadow-lg"
-        />
-      </div>
-
-      {/* Tagline */}
-      <p className="font-gaegu text-2xl sm:text-3xl md:text-4xl text-nomnom-brown font-bold text-center mb-2
-                    drop-shadow-sm">
-        he eats ALL the tings 🐹
-      </p>
-      <p className="font-itim text-lg sm:text-xl text-nomnom-brown/80 text-center mb-8">
-        a very hungry hamster on the Solana blockchain ⚡
-      </p>
-
-      {/* CTA Buttons */}
-      <div className="flex flex-wrap gap-3 justify-center mb-8">
-        <a
-          href="https://jup.ag/swap/SOL-6ZrYhkwvoYE4QqzpdzJ7htEHwT2u2546EkTNJ7qepump"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="btn-kawaii text-base sm:text-lg px-6 py-3"
-        >
-          Buy $NOMNOM ★
-        </a>
-        <a
-          href="https://dexscreener.com/solana/6ZrYhkwvoYE4QqzpdzJ7htEHwT2u2546EkTNJ7qepump"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="btn-kawaii-outline text-base sm:text-lg px-6 py-3"
-        >
-          View Chart 📈
-        </a>
-      </div>
-
-      {/* Contract Address */}
-      <div className="card-kawaii max-w-full sm:max-w-lg md:max-w-xl w-full mx-4 text-center mb-16">
-        <p className="font-gaegu text-sm text-nomnom-brown/70 mb-1 uppercase tracking-wider">
-          Contract Address
+        <p className="font-gaegu text-xl sm:text-2xl md:text-3xl text-nomnom-ink/60 font-bold tracking-widest uppercase">
+          eat all the tings
         </p>
-        <div className="flex items-center gap-2 flex-wrap justify-center">
-          <code className="font-mono text-xs sm:text-sm text-nomnom-brown break-all">
-            {CONTRACT_ADDRESS}
-          </code>
-          <button
-            onClick={handleCopy}
-            className={`flex-shrink-0 px-3 py-1.5 rounded-xl font-gaegu font-bold text-sm border-2 border-nomnom-brown
-                        transition-all duration-200 border-b-4
-                        ${copied
-                          ? 'bg-nomnom-mint text-nomnom-brown border-b-2 translate-y-0.5'
-                          : 'bg-nomnom-yellow text-nomnom-brown hover:bg-nomnom-pink hover:text-white hover:-translate-y-0.5'
-                        }`}
-          >
-            {copied ? '✓ Copied!' : 'Copy'}
-          </button>
-        </div>
-      </div>
 
-      {/* Scroll hint */}
-      <div className="absolute bottom-6 left-0 right-0 flex flex-col items-center gap-1 animate-bounce">
-        <span className="font-gaegu text-sm text-nomnom-brown/60">scroll for more nom</span>
-        <svg className="w-5 h-5 text-nomnom-brown/60" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-        </svg>
+        <div className="my-8 md:my-10 relative">
+          <div className="animate-bounce-slow drop-shadow-xl">
+            <img
+              src={current.src}
+              alt={current.alt}
+              className={`w-44 sm:w-56 md:w-64 lg:w-72 h-auto transition-opacity duration-300 ${
+                fading ? 'opacity-0' : 'opacity-100'
+              }`}
+            />
+          </div>
+        </div>
+
+        <a
+          href="#feed"
+          className="btn-kawaii text-lg sm:text-xl px-8 py-3.5"
+        >
+          View Memes!
+        </a>
+
+        <p className="font-gaegu text-base text-nomnom-ink/40 mt-6 animate-bounce">
+          ↓ scroll
+        </p>
       </div>
     </section>
   );
